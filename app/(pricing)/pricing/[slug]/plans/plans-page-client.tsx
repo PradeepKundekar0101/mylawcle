@@ -158,7 +158,7 @@ export default function PlansPageContent({ tenant, currentPlanName }: PlansPageC
         <Link href={getDataPath(tenant.slug)} className="text-sm text-gray-500 hover:text-gray-700">
           Cancel
         </Link>
-        <h1 className="text-3xl font-bold">Base Chat Data Plans</h1>
+        <h1 className="text-3xl font-bold">MyLawCLE Data Plans</h1>
       </div>
 
       {/* Pricing Table */}
@@ -224,9 +224,9 @@ export default function PlansPageContent({ tenant, currentPlanName }: PlansPageC
                             }}
                             disabled={Boolean(
                               normalizePlanName(currentPlanName) === tierId ||
-                                (currentPlanName &&
-                                  TIER_UPGRADE_PATH.indexOf(normalizePlanName(currentPlanName) as Tier) >
-                                    TIER_UPGRADE_PATH.indexOf(tierId as Tier)),
+                              (currentPlanName &&
+                                TIER_UPGRADE_PATH.indexOf(normalizePlanName(currentPlanName) as Tier) >
+                                TIER_UPGRADE_PATH.indexOf(tierId as Tier)),
                             )}
                             onClick={() => {
                               if (isEnterprise) {
@@ -242,8 +242,8 @@ export default function PlansPageContent({ tenant, currentPlanName }: PlansPageC
                               : normalizePlanName(currentPlanName) === tierId
                                 ? "Current Plan"
                                 : currentPlanName &&
-                                    TIER_UPGRADE_PATH.indexOf(normalizePlanName(currentPlanName) as Tier) >
-                                      TIER_UPGRADE_PATH.indexOf(tierId as Tier)
+                                  TIER_UPGRADE_PATH.indexOf(normalizePlanName(currentPlanName) as Tier) >
+                                  TIER_UPGRADE_PATH.indexOf(tierId as Tier)
                                   ? "Downgrade"
                                   : "Upgrade"}
                           </Button>

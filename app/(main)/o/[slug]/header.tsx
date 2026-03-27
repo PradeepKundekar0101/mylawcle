@@ -83,7 +83,7 @@ export default function Header({
   email,
   role,
   billingEnabled,
-  onNavClick = () => {},
+  onNavClick = () => { },
 }: Props) {
   const router = useRouter();
   const [tenants, setTenants] = useState<z.infer<typeof tenantListResponseSchema>>([]);
@@ -148,7 +148,7 @@ export default function Header({
           )}
           {tenant.paidStatus === "legacy" && role === "admin" && (
             <Banner>
-              We hope you enjoyed Base Chat Early Access!{" "}
+              We hope you enjoyed MyLawCLE Early Access!{" "}
               <BannerLink href={getPricingPlansPath(tenant.slug)}>New pricing</BannerLink> starts June 5. To upgrade,{" "}
               <BannerLink href="https://calendly.com/d/crhj-b4f-d4v/ragie-basechat-discussion" target="_blank">
                 contact sales.
@@ -157,7 +157,7 @@ export default function Header({
           )}
           {tenant.paidStatus === "expired" && role === "admin" && (
             <Banner>
-              Your Base Chat trial has expired.{" "}
+              Your MyLawCLE trial has expired.{" "}
               <BannerLink href={getPricingPlansPath(tenant.slug)}>Upgrade to a paid plan</BannerLink> or{" "}
               <BannerLink href="https://calendly.com/d/crhj-b4f-d4v/ragie-basechat-discussion" target="_blank">
                 contact sales
@@ -166,7 +166,7 @@ export default function Header({
             </Banner>
           )}
           {tenant.paidStatus === "expired" && role !== "admin" && (
-            <Banner>This chatbot is currently inactive. For support, please reach out to the admin.</Banner>
+            <Banner>This MyLawCLE is currently inactive. For support, please reach out to the admin.</Banner>
           )}
         </>
       )}
@@ -177,7 +177,7 @@ export default function Header({
             className="rounded-lg bg-[#004376] text-white px-4 py-2.5 mr-6 flex items-center"
             href={getSignUpPath()}
           >
-            Create my own chatbot
+            Create my own MyLawCLE
           </Link>
           <Image src={AnonProfileIcon} alt={name || "Guest"} />
         </div>

@@ -14,8 +14,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Base Chat",
-  description: "Base Chat powered by Ragie",
+  title: "MyLawCLE",
+  description: "MyLawCLE powered by Ragie",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
